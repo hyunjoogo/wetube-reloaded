@@ -1,4 +1,7 @@
 extends base.pug
-
+include ./mixin/video
 block content
-    h1 home
+       each video in videos
+            +video(video)
+       else
+            li 아무것도 찾지 못했습니다.
